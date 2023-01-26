@@ -6,7 +6,11 @@ int main(int argc, char **argv)
 {
     GameInfo gameInfo;
     gameInfo.gamestate = MENU;
+
     Window window("Tic Tac Toe");
+    
+    MenuScene menuScene(&gameInfo);
+
     while (window.isRunning())
     {
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape) &&
@@ -21,7 +25,7 @@ int main(int argc, char **argv)
 
         if (gameInfo.gamestate == MENU)
         {
-            std::cout << "print menu screen";
+            menuScene.draw(window.getWindow());
         }
 
         window.display();

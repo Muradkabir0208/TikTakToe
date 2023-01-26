@@ -9,6 +9,7 @@ enum State { MENU };
 
 struct GameInfo {
   State gamestate;
+  sf::Font font;
 };
 
 #endif
