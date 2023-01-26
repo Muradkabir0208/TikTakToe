@@ -1,3 +1,4 @@
+#include <iostream>
 #include "gameinfo.h"
 #include "window.h"
 
@@ -16,11 +17,11 @@ int main(int argc, char **argv)
         float delta = window.update();
         window.prepare();
 
-        //render
+        // render
 
-        if (gameInfo.gamestate == MENU) {
-            // menuScene.draw(window.getWindow());
-            std::cout<<"print menu screen";
+        if (gameInfo.gamestate == MENU)
+        {
+            std::cout << "print menu screen";
         }
 
         window.display();
