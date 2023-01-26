@@ -1,7 +1,10 @@
+#include "gameinfo.h"
 #include "window.h"
 
 int main(int argc, char **argv)
 {
+    GameInfo gameInfo;
+    gameInfo.gamestate = MENU;
     Window window("Tic Tac Toe");
     while (window.isRunning())
     {
@@ -12,6 +15,14 @@ int main(int argc, char **argv)
         }
         float delta = window.update();
         window.prepare();
+
+        //render
+
+        if (gameInfo.gamestate == MENU) {
+            // menuScene.draw(window.getWindow());
+            std::cout<<"print menu screen";
+        }
+
         window.display();
     }
     return 0;
