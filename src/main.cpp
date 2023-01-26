@@ -1,5 +1,6 @@
-#include <iostream>
-#include "gameinfo.h"
+#include <SFML/System.hpp>
+
+#include "scenes/menuscene.h"
 #include "window.h"
 
 int main(int argc, char **argv)
@@ -8,7 +9,7 @@ int main(int argc, char **argv)
     gameInfo.gamestate = MENU;
 
     Window window("Tic Tac Toe");
-    
+
     MenuScene menuScene(&gameInfo);
 
     while (window.isRunning())
