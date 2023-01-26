@@ -3,11 +3,16 @@
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
+#include <list>
+#include <memory>
+
+#include "eventhandler.h"
 
 class Window
 {
     sf::Clock clock;
     sf::RenderWindow window;
+    std::list<EventHandler *> eventHandlers;
     bool focused = true;
 
 public:
@@ -26,6 +31,8 @@ public:
     bool isRunning();
 
     bool isFocused() const;
+
+    void addEventHandler(EventHandler *handler);
 
     sf::RenderWindow &getWindow();
 };

@@ -1,12 +1,13 @@
-#ifndef TICTACTOE_MENUSCENE_HPP
-#define TICTACTOE_MENUSCENE_HPP
+#ifndef TIKTAKTOE_MENUSCENE_H
+#define TIKTAKTOE_MENUSCENE_H
 
 #include "../eventhandler.h"
 #include "../gameinfo.h"
 #include "ui/button.h"
 #include <memory>
 
-class MenuScene : public EventHandler {
+class MenuScene : public EventHandler
+{
 
   GameInfo *gameInfo;
   sf::Texture buttonTex;
@@ -21,4 +22,4 @@ public:
   void handle(sf::Event &event) override;
 };
 
-#endif // TICTACTOE_MENUSCENE_HPP
+#endif // TIKTAKTOE_MENUSCENE_H

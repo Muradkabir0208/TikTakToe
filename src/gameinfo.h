@@ -4,12 +4,27 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Network.hpp>
 
-//states of game 
-enum State { MENU };
+// states of game
+enum State
+{
+  MENU,
+  NETWORK,
+  GAME
+};
 
-struct GameInfo {
+enum NetworkType
+{
+  HOST,
+  CLIENT
+};
+
+struct GameInfo
+{
   State gamestate;
+  NetworkType networkType;
+  sf::TcpSocket *socket;
   sf::Font font;
+  char me;
 };
 
 #endif

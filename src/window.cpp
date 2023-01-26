@@ -1,4 +1,5 @@
 #include "window.h"
+#include "scenes/menuscene.h"
 #include <iostream>
 
 Window::Window(std::string title)
@@ -39,6 +40,11 @@ void Window::prepare() { window.clear(sf::Color(175, 175, 175, 255)); }
 void Window::display() { window.display(); }
 
 bool Window::isRunning() { return window.isOpen(); }
+
+void Window::addEventHandler(EventHandler *handler)
+{
+    eventHandlers.push_back(handler);
+}
 
 sf::RenderWindow &Window::getWindow() { return window; }
 

@@ -1,5 +1,5 @@
-#ifndef TICTACTOE_BUTTON_HPP
-#define TICTACTOE_BUTTON_HPP
+#ifndef TIKTAKTOE_BUTTON_HPP
+#define TIKTAKTOE_BUTTON_HPP
 
 #include <SFML/Graphics.hpp>
 #include <functional>
@@ -41,4 +41,4 @@ public:
     void setOnclick(const std::function<void()> &onclick);
 };
 
-#endif // TICTACTOE_BUTTON_HPP
+#endif // TIKTAKTOE_BUTTON_HPP
