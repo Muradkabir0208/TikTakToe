@@ -1,43 +1,33 @@
-#include "animation.h"
+#ifndef TICTACTOE_ANIMATION_HPP
+#define TICTACTOE_ANIMATION_HPP
 
-Animation::Animation(float fps, sf::Texture &texture, int rows, int cols) {
-  swapTime = 1.0f / fps;
-  setTexture(texture, rows, cols);
-}
+#include <SFML/Graphics.hpp>
+#include <list>
+#include <memory>
 
-void Animation::update(float delta) { time += delta; }
+// this class isn't used but still included
+class Animation {
 
-void Animation::draw(std::shared_ptr<sf::RenderWindow> &window) {
-  if (time > swapTime) {
-    // next frame
-    time -= swapTime;
-    currentFrame++;
-    if (currentFrame == regions.size())
-      currentFrame = 0;
+  float swapTime;
+  float time = 0;
+  sf::Sprite sprite;
+  int currentFrame = 0;
+  std::vector<sf::IntRect> regions;
 
-    sprite.setTextureRect(regions[currentFrame]);
-  }
+public:
+  Animation() = default;
 
-  window->draw(sprite);
-}
+  Animation(float fps, sf::Texture &texture, int rows, int cols);
 
-void Animation::setFps(float fps) { swapTime = 1.0f / fps; }
+  void setFps(float fps);
 
-// TODO: clear regions
-void Animation::setTexture(sf::Texture &texture, int rows, int cols) {
-  sprite.setTexture(texture);
-  int w = (int)texture.getSize().x / cols;
-  int h = (int)texture.getSize().y / rows;
+  void setTexture(sf::Texture &texture, int rows, int cols);
 
-  for (int i = 0; i < rows; ++i) {
-    for (int j = 0; j < cols; ++j) {
-      regions.push_back({w * j, h * i, w, h});
-    }
-  }
+  void setPosition(sf::Vector2f pos);
 
-  sprite.setTextureRect(regions[0]);
-  currentFrame = 0;
-  time = 0;
-}
+  void update(float delta);
 
-void Animation::setPosition(sf::Vector2f pos) { sprite.setPosition(pos); }
+  void draw(std::shared_ptr<sf::RenderWindow> &window);
+};
+
+#endif // TICTACTOE_ANIMATION_HPP
