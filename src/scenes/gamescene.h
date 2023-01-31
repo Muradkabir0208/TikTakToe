@@ -1,5 +1,5 @@
-#ifndef TICTACTOE_GAMESCENE_HPP
-#define TICTACTOE_GAMESCENE_HPP
+#ifndef TIKTAKTOE_GAMESCENE_HPP
+#define TIKTAKTOE_GAMESCENE_HPP
 
 #include "../eventhandler.h"
 #include "../gameinfo.h"
@@ -43,4 +43,4 @@ public:
     void handle(sf::Event &event) override;
 };
 
-#endif // TICTACTOE_GAMESCENE_HPP
+#endif // TIKTAKTOE_GAMESCENE_HPP

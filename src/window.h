@@ -1,5 +1,5 @@
-#ifndef TICTACTOE_WINDOW_HPP
-#define TICTACTOE_WINDOW_HPP
+#ifndef TIKTAKTOE_WINDOW_HPP
+#define TIKTAKTOE_WINDOW_HPP
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>

@@ -1,5 +1,5 @@
-#ifndef TICTACTOE_TEXTINPUT_HPP
-#define TICTACTOE_TEXTINPUT_HPP
+#ifndef TIKTAKTOE_TEXTINPUT_H
+#define TIKTAKTOE_TEXTINPUT_H
 
 #include <SFML/Graphics.hpp>
 #include <memory>
@@ -37,4 +37,4 @@ public:
   bool isEntered() const;
 };
 
-#endif // TICTACTOE_TEXTINPUT_HPP
+#endif // TIKTAKTOE_TEXTINPUT_H

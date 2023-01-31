@@ -26,7 +26,6 @@ void TextInput::draw(sf::RenderWindow &window) {
   window.draw(text);
 }
 
-// TODO: remove quick blink of protruding char
 void TextInput::handle(sf::Event &event) {
   if (event.type == sf::Event::TextEntered) {
     if (event.text.unicode < 128) {

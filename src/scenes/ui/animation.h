@@ -1,11 +1,10 @@
-#ifndef TICTACTOE_ANIMATION_HPP
-#define TICTACTOE_ANIMATION_HPP
+#ifndef TIKTAKTOE_ANIMATION_H
+#define TIKTAKTOE_ANIMATION_H
 
 #include <SFML/Graphics.hpp>
 #include <list>
 #include <memory>
 
-// this class isn't used but still included
 class Animation {
 
   float swapTime;
@@ -30,4 +29,4 @@ public:
   void draw(std::shared_ptr<sf::RenderWindow> &window);
 };
 
-#endif // TICTACTOE_ANIMATION_HPP
+#endif // TIKTAKTOE_ANIMATION_H

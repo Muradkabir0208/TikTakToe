@@ -1,5 +1,5 @@
-#ifndef TICTACTOE_NETWORKSCENE_HPP
-#define TICTACTOE_NETWORKSCENE_HPP
+#ifndef TIKTAKTOE_NETWORKSCENE_HPP
+#define TIKTAKTOE_NETWORKSCENE_HPP
 
 #include "../eventhandler.h"
 #include "../gameinfo.h"
@@ -47,4 +47,4 @@ public:
     void handle(sf::Event &event) override;
 };
 
-#endif // TICTACTOE_NETWORKSCENE_HPP
+#endif // TIKTAKTOE_NETWORKSCENE_HPP

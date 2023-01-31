@@ -6,8 +6,7 @@
 #include "ui/button.h"
 #include <memory>
 
-class MenuScene : public EventHandler
-{
+class MenuScene : public EventHandler {
 
   GameInfo *gameInfo;
   sf::Texture buttonTex;

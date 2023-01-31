@@ -1,5 +1,5 @@
-#ifndef TICTACTOE_GAMEINFO_H
-#define TICTACTOE_GAMEINFO_H
+#ifndef TIKTAKTOE_GAMEINFO_H
+#define TIKTAKTOE_GAMEINFO_H
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Network.hpp>

@@ -1,44 +1,43 @@
-#ifndef TIKTAKTOE_BUTTON_HPP
-#define TIKTAKTOE_BUTTON_HPP
+#ifndef TIKTAKTOE_BUTTON_H
+#define TIKTAKTOE_BUTTON_H
 
 #include <SFML/Graphics.hpp>
 #include <functional>
 #include <memory>
 
-class Button
-{
+class Button {
 
-    static constexpr float DOWN_SCALE = 0.94f;
+  static constexpr float DOWN_SCALE = 0.94f;
 
-    sf::Sprite sprite;
+  sf::Sprite sprite;
 
-    std::function<void()> onclick;
-    sf::Text text;
-    bool down = false;
+  std::function<void()> onclick;
+  sf::Text text;
+  bool down = false;
 
 public:
-    Button() = default;
+  Button() = default;
 
-    Button(std::string text, sf::Texture texture, sf::Vector2f position,
-           std::function<void()> onclick);
+  Button(std::string text, sf::Texture texture, sf::Vector2f position,
+         std::function<void()> onclick);
 
-    void draw(sf::RenderWindow &window);
+  void draw(sf::RenderWindow &window);
 
-    void mouseDown(int x, int y);
+  void mouseDown(int x, int y);
 
-    void mouseUp(int x, int y);
+  void mouseUp(int x, int y);
 
-    void setFont(const sf::Font &font);
+  void setFont(const sf::Font &font);
 
-    void setText(const std::string &text);
+  void setText(const std::string &text);
 
-    void setTexture(const sf::Texture &texture);
+  void setTexture(const sf::Texture &texture);
 
-    void setPosition(const sf::Vector2f &position);
+  void setPosition(const sf::Vector2f &position);
 
-    const sf::FloatRect getBounds() const;
+  const sf::FloatRect getBounds() const;
 
-    void setOnclick(const std::function<void()> &onclick);
+  void setOnclick(const std::function<void()> &onclick);
 };
 
-#endif // TIKTAKTOE_BUTTON_HPP
+#endif // TIKTAKTOE_BUTTON_H

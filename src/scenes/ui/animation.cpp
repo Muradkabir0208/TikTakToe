@@ -9,7 +9,6 @@ void Animation::update(float delta) { time += delta; }
 
 void Animation::draw(std::shared_ptr<sf::RenderWindow> &window) {
   if (time > swapTime) {
-    // next frame
     time -= swapTime;
     currentFrame++;
     if (currentFrame == regions.size())
@@ -23,7 +22,6 @@ void Animation::draw(std::shared_ptr<sf::RenderWindow> &window) {
 
 void Animation::setFps(float fps) { swapTime = 1.0f / fps; }
 
-// TODO: clear regions
 void Animation::setTexture(sf::Texture &texture, int rows, int cols) {
   sprite.setTexture(texture);
   int w = (int)texture.getSize().x / cols;
