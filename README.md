@@ -9,23 +9,28 @@ Dependencies:
 - C++ 17
 - SFML 2.5
 
-<!-- ## Building on Linux (Fedora) -->
-<!-- * Install dependencies: `doas dnf install SFML SFML-devel`
-* Generate Makefile: `cmake -S . -B cmake-build-debug -DCMAKE_BUILD_TYPE=Debug`
-* Move to the dir and `make` -->
-
 ## Ubuntu
 
-*1. install git cmake and g++*
-``` console
+- Install dependencies:
+
+```console
 sudo apt-get -y install cmake git g++ libsfml-dev
 ```
 
-*2. Generate Cmake*
-``` console
+## Fedora
+
+- Install dependencies:
+
+```console
+  doas dnf install SFML SFML-devel
+```
+
+## Build:
+
+```console
 mkdir build
 cd build
 cmake --build . --config Release
 ```
 
-*also can be run using script.sh*
+_also can be run using build.sh_
