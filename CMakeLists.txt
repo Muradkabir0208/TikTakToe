@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.13)
 project(TikTakToe)
 
 set(CMAKE_CXX_STANDARD 17)
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 
 if (${CMAKE_BUILD_TYPE} Release)
     add_definitions("-DRELEASE_BUILD")
@@ -12,7 +13,6 @@ if (${CMAKE_BUILD_TYPE} Release)
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mwindows")
     endif ()
 endif()
-
 message("Building ${PROJECT_NAME} in ${CMAKE_BUILD_TYPE} mode")
 
 file(GLOB PROJECT_HEADERS src/*.h)
