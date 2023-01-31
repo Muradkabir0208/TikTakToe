@@ -20,6 +20,8 @@ int main(int argc, char **argv)
     window.addEventHandler(&networkScene);
     window.addEventHandler(&gameScene);
 
+    gameInfo.font.loadFromFile("res/roboto.ttf");
+    
     while (window.isRunning())
     {
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape) &&

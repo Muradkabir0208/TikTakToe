@@ -31,7 +31,9 @@ float Window::update()
         if (event.type == sf::Event::LostFocus)
             focused = false;
     }
-
+    for (EventHandler *handler : eventHandlers)
+      handler->handle(event);
+    
     return clock.restart().asSeconds();
 }
 
