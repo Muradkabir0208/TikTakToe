@@ -4,7 +4,7 @@ project(TikTakToe)
 set(CMAKE_CXX_STANDARD 17)
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 
-if (${CMAKE_BUILD_TYPE} Release)
+if (${CMAKE_BUILD_TYPE} STREQUAL Release)
     add_definitions("-DRELEASE_BUILD")
 
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
