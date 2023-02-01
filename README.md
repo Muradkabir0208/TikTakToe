@@ -29,7 +29,7 @@ sudo apt-get -y install cmake git g++ libsfml-dev
 
 ```console
 mkdir build
-cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release
 cmake --build . --config Release
 ```
 
