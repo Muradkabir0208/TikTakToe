@@ -45,5 +45,9 @@ endif()
 target_link_libraries(${PROJECT_NAME} sfml-system sfml-window sfml-graphics sfml-network sfml-audio)
 
 ADD_CUSTOM_COMMAND(TARGET TikTakToe POST_BUILD
-	COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/res" "${CMAKE_CURRENT_BINARY_DIR}/res"
-	COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_CURRENT_BINARY_DIR}/_deps/sfml-build/lib" "${CMAKE_CURRENT_BINARY_DIR}")
+	COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/res" "${CMAKE_CURRENT_BINARY_DIR}/res")
+if(NOT SFML_FOUND)
+  add_custom_command(TARGET TikTakToe POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_CURRENT_BINARY_DIR}/_deps/sfml-build/lib" "${CMAKE_CURRENT_BINARY_DIR}"
+  )
+endif()	
